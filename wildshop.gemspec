@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 5.0.0", ">= 5.0.0.1"
-  s.add_dependency 'pg', '~> 0.18.4'
+  s.add_dependency 'sqlite3'
   s.add_dependency 'money-rails'
   s.add_dependency 'devise'
 
