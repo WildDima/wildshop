@@ -1,0 +1,24 @@
+AllCops:
+  Exclude:
+    - test/dummy/**/*
+    - db/**/*
+    - bin/**/*
+    - config/**/*
+    - lib/*
+    - lib/wildshop/version.rb
+    - test/*
+    - spec/spec_helper.rb
+    - spec/rails_helper.rb
+    - spec/support/feature_helpers/chosen.rb
+    - Gemfile
+    - Rakefile
+    - wildshop.gemspec
+
+Rails:
+  Enabled: true
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Documentation:
+  Enabled: false
