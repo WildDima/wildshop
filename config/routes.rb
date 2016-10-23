@@ -1,3 +1,3 @@
 Wildshop::Engine.routes.draw do
-  devise_for :admins, class_name: "Wildshop::Admin", module: :devise
+  devise_for :admin, class_name: "Wildshop::User", module: :devise, controllers: { sessions: 'wildshop/admin/sessions' }
 end

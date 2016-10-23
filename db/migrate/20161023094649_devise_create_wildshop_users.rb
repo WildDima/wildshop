@@ -1,6 +1,6 @@
-class DeviseCreateWildshopAdmins < ActiveRecord::Migration[5.0]
+class DeviseCreateWildshopUsers < ActiveRecord::Migration[5.0]
   def change
-    create_table :wildshop_admins do |t|
+    create_table :wildshop_users do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
@@ -34,8 +34,8 @@ class DeviseCreateWildshopAdmins < ActiveRecord::Migration[5.0]
       t.timestamps null: false
     end
 
-    add_index :wildshop_admins, :email,                unique: true
-    add_index :wildshop_admins, :reset_password_token, unique: true
+    add_index :wildshop_users, :email,                unique: true
+    add_index :wildshop_users, :reset_password_token, unique: true
     # add_index :wildshop_admins, :confirmation_token,   unique: true
     # add_index :wildshop_admins, :unlock_token,         unique: true
   end

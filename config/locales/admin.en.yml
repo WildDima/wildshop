@@ -1,0 +1,5 @@
+en:
+  admin:
+    sessions:
+      form: 
+        submit: 'Submit'
