@@ -1,11 +1,9 @@
  = simple_form_for resource, as: resource_name, url: session_path(resource_name),
                               html: { class: 'form-horizontal' } do |f|
-    = f.input :email
-    = f.input :password
+    = f.input :email, input_html: { class: 'form-control' }
+    = f.input :password, input_html: { class: 'form-control' }
     - if devise_mapping.rememberable?
-      .form-group
-        .col-sm-offset-3.col-sm-9
-          => f.check_box :remember_me
-          = f.label :remember_me
+      => f.check_box :remember_me
+      = f.label :remember_me
     .box-footer
       = f.button :submit, t('.submit')

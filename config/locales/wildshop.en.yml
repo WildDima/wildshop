@@ -1,0 +1,9 @@
+en:
+  wildshop:
+    shared:
+      admin_title: Wildshop
+      log_in: Log In
+    admin:
+      sessions:
+        form: 
+          submit: 'Submit'
