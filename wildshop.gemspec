@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'font-awesome-rails'
   s.add_dependency 'slim-rails'
   s.add_dependency 'simple_form'
+  s.add_dependency 'pundit'
 
   s.add_development_dependency 'rubocop'
   s.add_development_dependency 'rspec-rails'
