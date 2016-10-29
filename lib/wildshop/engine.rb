@@ -3,8 +3,8 @@ module Wildshop
     isolate_namespace Wildshop
 
     initializer :assets do |app|
-      Rails.application.config.assets.precompile += %w(wildshop/wildshop.scss) 
-      Rails.application.config.assets.precompile += %w(wildshop/wildshop.js)
+      Rails.application.config.assets.precompile += %w(wildshop/admin/admin.scss) 
+      Rails.application.config.assets.precompile += %w(wildshop/admin/admin.js)
       Rails.application.config.assets.paths << root.join("app", "assets", "images")
     end
 

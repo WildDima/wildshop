@@ -1,7 +1,7 @@
 module Wildshop
   module Admin
     class SessionsController < Devise::SessionsController
-      layout 'wildshop/wildshop'
+      layout 'wildshop/admin/devise'
     # before_action :configure_sign_in_params, only: [:create]
 
       # GET /resource/sign_in

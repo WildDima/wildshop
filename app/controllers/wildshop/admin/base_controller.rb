@@ -4,6 +4,7 @@ module Wildshop
     class BaseController < ApplicationController
       include Pundit
       protect_from_forgery
+      layout 'wildshop/admin/admin'
 
       protected
 

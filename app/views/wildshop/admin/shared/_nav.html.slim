@@ -1,0 +1,35 @@
+aside.main-sidebar
+  section.sidebar
+    ul.sidebar-menu
+      li class=('active' if controller_name == 'products')
+        = link_to admin_products_path do
+          i.fa.fa-building-o>
+          span=t '.products'
+      / li.treeview class=('active' if controller_name == 'pages_texts')
+      /   a href="#"
+      /     i.fa.fa-book
+      /     span
+      /       = t('.text')
+      /     span.pull-right-container
+      /       i.fa.fa-angle-left.pull-right
+      /   ul.treeview-menu
+      /     - PagesText.pages.keys.each do |key|
+      /       - if PagesText.send(key).any?
+      /         li class=('active' if params[:page_name] == key)
+      /           = link_to admin_page_pages_texts_path(key)
+      /             i.fa.fa-circle-o
+      /             = t(".#{key}")
+      / li.treeview class=('active' if controller_name == 'pages_images')
+      /   a href="#"
+      /     i.fa.fa-picture-o
+      /     span
+      /       = t('.images')
+      /     span.pull-right-container
+      /       i.fa.fa-angle-left.pull-right
+      /   ul.treeview-menu
+      /     - PagesImage.pages.keys.each do |key|
+      /       - if PagesImage.send(key).any?
+      /         li class=('active' if params[:page_name] == key)
+      /           = link_to admin_page_pages_images_path(key)
+      /             i.fa.fa-circle-o
+      /             = t(".#{key}")
