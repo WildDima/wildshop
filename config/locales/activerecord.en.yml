@@ -1,9 +1,15 @@
 en:
   activerecord:
     models:
-      products: Products
+      wildshop/product: Products
     attributes:
-      title: Title
-      description: Description
-      price: Price
-      wildshop_categories_id: Categories
+      wildshop/product:
+        id: Id
+        title: Title
+        description: Description
+        price: Price
+        wildshop_categories_id: Categories
+        price_cents: Price cents
+        price_currency: Price currency
+        created_at: Created at
+        updated_at: Update at
