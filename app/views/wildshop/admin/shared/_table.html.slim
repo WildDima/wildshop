@@ -1,0 +1,36 @@
+/! fix it
+- object.inspect
+.content-wrapper
+  section.content-header
+    h1
+      = object.first.class.name
+    ol.breadcrumb
+      li
+        = link_to admin_root_path do
+          i.fa.fa-dashboard
+          = I18n.t("wildshop.shared.#{admin_root_path}")
+      li.active
+        = object.first.class.name
+  - obj_fields = object.first.accessed_fields
+  section.content
+    .row
+      .col-xs-12
+        .box
+          .box-header
+            h3.box-title
+              = I18n.t('wildshop.shared.table')
+          .box-body
+            table#example2.table.table-bordered.table-hover
+              thead
+                tr
+                  - obj_fields.each do |field_name|
+                    th= field_name
+              tbody
+                - object.each do |obj|
+                  tr
+                    - obj_fields.each do |field_name|
+                      td= obj.public_send(field_name)
+              tfoot
+                tr
+                  - obj_fields.each do |field_name|
+                    th= field_name

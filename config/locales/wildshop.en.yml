@@ -3,6 +3,8 @@ en:
     shared:
       admin_title: Wildshop
       log_in: Log In
+      '/admin': Admin
+      table: Table
     admin:
       sessions:
         form: 
