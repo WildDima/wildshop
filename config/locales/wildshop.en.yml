@@ -2,9 +2,13 @@ en:
   wildshop:
     shared:
       admin_title: Wildshop
+      admin_title_short: W
       log_in: Log In
-      '/admin': Admin
       table: Table
+      success: Success
+      create: Create
+      update: Update
+      '/admin': Admin
     admin:
       sessions:
         form: 

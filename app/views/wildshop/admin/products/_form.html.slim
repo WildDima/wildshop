@@ -1,0 +1,9 @@
+= simple_form_for [:admin, @product], html: { class: 'form-horizontal' } do |f|
+  .box.box-primary
+    .box-body
+      .col-sm-6
+        = f.input :name
+        = f.association :wildshop_category
+    .box-footer
+      => link_to t('wildshop.shared.back'), admin_products_path, class: 'btn btn-default'
+      => f.submit f.object.new_record? ? t('wildshop.shared.create') : t('wildshop.shared.update'), class: 'btn btn-primary pull-right'

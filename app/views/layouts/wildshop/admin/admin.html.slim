@@ -3,7 +3,7 @@ html
   head
     meta charset='utf-8'
     meta name='viewport' content='width=device-width, initial-scale=1.0'
-    title= I18n.t('.wildshop.shared.admin_title')
+    title= t('.shared.admin_title')
     = stylesheet_link_tag    'wildshop/admin/admin', media: 'all'
     = javascript_include_tag 'wildshop/admin/admin'
     = csrf_meta_tags
@@ -11,8 +11,8 @@ html
     .wrapper
       header.main-header
         = link_to admin_root_path, class: 'logo' do
-          span.logo-mini= I18n.t('.wildshop.shared.admin_title').first
-          = I18n.t('.wildshop.shared.admin_title')
+          span.logo-mini= t('.shared.admin_title')
+          = t('.shared.admin_title')
         nav.navbar.navbar-static-top
           a.sidebar-toggle data-toggle='offcanvas' href='#' role='button'
             span.sr-only
@@ -27,4 +27,5 @@ html
                   li= link_to t('.logout'), destroy_admin_session_path, method: :delete
 
       = render 'wildshop/admin/shared/nav'
-      = yield
+      .content-wrapper
+        = yield

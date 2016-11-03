@@ -1,1 +1,3 @@
-= render 'wildshop/admin/shared/table', object: @products, obj_fields: %i(id title description price)
+- if policy(@products).new?
+  = link_to 'new', new_admin_product_path, class: 'btn btn-success'
+= render 'wildshop/admin/shared/table', object: @products, obj_fields: %i(id name description price)
