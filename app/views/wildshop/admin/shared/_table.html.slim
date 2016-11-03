@@ -1,3 +1,4 @@
+- obj_fields ||= object.attribute_names
 .content-wrapper
   section.content-header
     h1
@@ -9,7 +10,6 @@
           = t(".shared.#{admin_root_path}")
       li.active
         = object.model_name.human
-  - obj_fields = object.attribute_names
   section.content
     .row
       .col-xs-12
@@ -32,3 +32,4 @@
                 tr
                   - obj_fields.each do |field_name|
                     th= object.first.class.human_attribute_name(field_name)
+  = paginate object

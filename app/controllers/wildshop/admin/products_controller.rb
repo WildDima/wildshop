@@ -3,7 +3,7 @@ module Wildshop
   module Admin
     class ProductsController < BaseController
       def index
-        @products = Wildshop::Product.all
+        @products = Wildshop::Product.page(params[:page]).per(params[:per_page])
         authorize @products
       end
 
